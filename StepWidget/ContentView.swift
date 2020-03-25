@@ -9,14 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var stepCount: String = ""
+    @State var stepCount: String = "..."
     
     var body: some View {
         VStack {
-            Button(action: loadStepCount) { Text("Load Step Count") }
             Text(stepCount)
+                .font(.system(size: 50))
             Button(action: authorizeHealthKit) { Text("Authorize HealthKit") }
         }
+        .padding()
+        .onAppear(perform: loadStepCount)
     }
     
     func authorizeHealthKit() {
@@ -32,6 +34,7 @@ struct ContentView: View {
                 return
             }
             print("HealthKit Authorization Succeeded")
+            self.loadStepCount()
         }
     }
     
