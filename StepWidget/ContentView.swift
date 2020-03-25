@@ -10,7 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Button(action: authorizeHealthKit) { Text("Authorize HealthKit") }
+    }
+    
+    func authorizeHealthKit() {
+        HealthKitAssistant.authorizeHealthKit { (authorized, error) in
+            guard authorized else {
+                let baseMessage = "HealthKit Authorization Failed"
+                
+                if let error = error {
+                    print("\(baseMessage). Reason: \(error.localizedDescription)")
+                } else {
+                    print("\(baseMessage)")
+                }
+                return
+            }
+            print("HealthKit Authorization Succeeded")
+        }
     }
 }
 
