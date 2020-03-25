@@ -13,11 +13,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(stepCount)
-                .font(.system(size: 50))
+            HStack {
+                Image(systemName: "flame")
+                    .foregroundColor(.red)
+                    .font(.system(size: 40))
+                Text(stepCount)
+                    .font(.system(size: 50))
+            }
+                .padding()
             Button(action: authorizeHealthKit) { Text("Authorize HealthKit") }
         }
-        .padding()
         .onAppear(perform: loadStepCount)
     }
     
