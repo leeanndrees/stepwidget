@@ -36,9 +36,8 @@ struct ContentView: View {
     }
     
     func loadStepCount() {
-        HealthDataStore().getTodaysSteps { (stepCountDouble) in
-            let stepCountString = String(stepCountDouble)
-            self.stepCount = stepCountString
+        HealthDataStore().getTodaysSteps { (stepCount) in
+            self.stepCount = stepCount
         }
     }
 }

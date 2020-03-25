@@ -10,7 +10,7 @@ import HealthKit
 
 class HealthDataStore {
 
-    func getTodaysSteps(completion: @escaping (Double) -> Void) {
+    func getTodaysSteps(completion: @escaping (String) -> Void) {
         let healthStore = HKHealthStore()
         
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
@@ -21,10 +21,18 @@ class HealthDataStore {
 
         let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
             guard let result = result, let sum = result.sumQuantity() else {
-                completion(0.0)
+                completion("no steps")
                 return
             }
-            completion(sum.doubleValue(for: HKUnit.count()))
+            let rawDouble = sum.doubleValue(for: HKUnit.count())
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            numberFormatter.maximumFractionDigits = 0
+            guard let formattedDouble = numberFormatter.string(from: NSNumber(value: rawDouble)) else {
+                completion("error")
+                return
+            }
+            completion(formattedDouble)
         }
 
         healthStore.execute(query)
