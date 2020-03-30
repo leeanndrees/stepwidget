@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43379F3C2432882100121467 /* StepFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43379F3B243287E700121467 /* StepFramework.framework */; };
+		43379F3D2432882100121467 /* StepFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43379F3B243287E700121467 /* StepFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43379F3F24328C5B00121467 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CEB9242A5D6F00BD4A8D /* HealthKitAssistant.swift */; };
 		4377CE94242A598600BD4A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CE93242A598600BD4A8D /* AppDelegate.swift */; };
 		4377CE96242A598600BD4A8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CE95242A598600BD4A8D /* SceneDelegate.swift */; };
 		4377CE98242A598600BD4A8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CE97242A598600BD4A8D /* ContentView.swift */; };
@@ -16,7 +19,6 @@
 		4377CEAB242A598A00BD4A8D /* StepWidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CEAA242A598A00BD4A8D /* StepWidgetTests.swift */; };
 		4377CEB8242A5CF300BD4A8D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4377CEB7242A5CF300BD4A8D /* HealthKit.framework */; };
 		4377CEBA242A5D6F00BD4A8D /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CEB9242A5D6F00BD4A8D /* HealthKitAssistant.swift */; };
-		4377CEBC242BB89E00BD4A8D /* HealthDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377CEBB242BB89D00BD4A8D /* HealthDataStore.swift */; };
 		439D402E24327E7300D80CE8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439D402D24327E7300D80CE8 /* NotificationCenter.framework */; };
 		439D403124327E7300D80CE8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D403024327E7300D80CE8 /* TodayViewController.swift */; };
 		439D403424327E7300D80CE8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439D403224327E7300D80CE8 /* MainInterface.storyboard */; };
@@ -24,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		43379F3A243287E700121467 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43379F36243287E700121467 /* StepFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 439D40472432838300D80CE8;
+			remoteInfo = StepFramework;
+		};
 		4377CEA7242A598A00BD4A8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4377CE88242A598600BD4A8D /* Project object */;
@@ -41,6 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		43379F3E2432882100121467 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43379F3D2432882100121467 /* StepFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		439D403924327E7300D80CE8 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		43379F36243287E700121467 /* StepFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StepFramework.xcodeproj; path = ../StepFramework/StepFramework.xcodeproj; sourceTree = "<group>"; };
 		4377CE90242A598600BD4A8D /* StepWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4377CE93242A598600BD4A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4377CE95242A598600BD4A8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +90,6 @@
 		4377CEB5242A5CF300BD4A8D /* StepWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepWidget.entitlements; sourceTree = "<group>"; };
 		4377CEB7242A5CF300BD4A8D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4377CEB9242A5D6F00BD4A8D /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
-		4377CEBB242BB89D00BD4A8D /* HealthDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStore.swift; sourceTree = "<group>"; };
 		439D402C24327E7300D80CE8 /* StepWidgetWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StepWidgetWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		439D402D24327E7300D80CE8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		439D403024327E7300D80CE8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4377CEB8242A5CF300BD4A8D /* HealthKit.framework in Frameworks */,
+				43379F3C2432882100121467 /* StepFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,9 +125,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43379F37243287E700121467 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43379F3B243287E700121467 /* StepFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4377CE87242A598600BD4A8D = {
 			isa = PBXGroup;
 			children = (
+				43379F36243287E700121467 /* StepFramework.xcodeproj */,
 				4377CE92242A598600BD4A8D /* StepWidget */,
 				4377CEA9242A598A00BD4A8D /* StepWidgetTests */,
 				439D402F24327E7300D80CE8 /* StepWidgetWidget */,
@@ -137,7 +167,6 @@
 				4377CEA1242A598900BD4A8D /* Info.plist */,
 				4377CE9B242A598900BD4A8D /* Preview Content */,
 				4377CEB9242A5D6F00BD4A8D /* HealthKitAssistant.swift */,
-				4377CEBB242BB89D00BD4A8D /* HealthDataStore.swift */,
 			);
 			path = StepWidget;
 			sourceTree = "<group>";
@@ -189,6 +218,7 @@
 				4377CE8D242A598600BD4A8D /* Frameworks */,
 				4377CE8E242A598600BD4A8D /* Resources */,
 				439D403924327E7300D80CE8 /* Embed App Extensions */,
+				43379F3E2432882100121467 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +298,12 @@
 			mainGroup = 4377CE87242A598600BD4A8D;
 			productRefGroup = 4377CE91242A598600BD4A8D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 43379F37243287E700121467 /* Products */;
+					ProjectRef = 43379F36243287E700121467 /* StepFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4377CE8F242A598600BD4A8D /* StepWidget */,
@@ -276,6 +312,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		43379F3B243287E700121467 /* StepFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = StepFramework.framework;
+			remoteRef = 43379F3A243287E700121467 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4377CE8E242A598600BD4A8D /* Resources */ = {
@@ -312,7 +358,6 @@
 			files = (
 				4377CE94242A598600BD4A8D /* AppDelegate.swift in Sources */,
 				4377CE96242A598600BD4A8D /* SceneDelegate.swift in Sources */,
-				4377CEBC242BB89E00BD4A8D /* HealthDataStore.swift in Sources */,
 				4377CE98242A598600BD4A8D /* ContentView.swift in Sources */,
 				4377CEBA242A5D6F00BD4A8D /* HealthKitAssistant.swift in Sources */,
 			);
@@ -331,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439D403124327E7300D80CE8 /* TodayViewController.swift in Sources */,
+				43379F3F24328C5B00121467 /* HealthKitAssistant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
