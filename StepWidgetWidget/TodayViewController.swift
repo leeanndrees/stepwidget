@@ -8,12 +8,20 @@
 
 import UIKit
 import NotificationCenter
+import StepFramework
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    @IBOutlet var stepCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateLabel()
+    }
+    
+    func updateLabel() {
+        HealthDataStore().getTodaysSteps { (stepCount) in
+            self.stepCountLabel.text = stepCount
+        }
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
